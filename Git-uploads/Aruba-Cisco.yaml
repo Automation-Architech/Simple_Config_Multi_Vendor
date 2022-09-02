@@ -1,0 +1,22 @@
+---
+- name: Configure TACACS server
+  hosts: aruba
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Configure TACACS server on Aruba Switches
+      aruba_config:
+        lines:
+          - write memory
+          - no lldp run
+
+
+- name: Configure TACACS server on Cisco Switches
+  hosts: ios
+  connection: network_cli
+  gather_facts: no
+  tasks:
+    - name: Configure TACACS server
+      ios_config:
+        lines:
+          - no cdp run

@@ -1,0 +1,1 @@
+This is a simple Ansible playbook for multi vendor switches. Here I have used Cisco and Aruba Switches. 
